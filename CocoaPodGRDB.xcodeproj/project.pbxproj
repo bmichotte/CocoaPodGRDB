@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35329723071CB27C4D63C10C /* Pods_CocoaPodGRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94250617CB9E49E4EC7C53 /* Pods_CocoaPodGRDB.framework */; };
 		436E56BE20766C95002B721D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E56BD20766C95002B721D /* AppDelegate.swift */; };
 		436E56C020766C95002B721D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E56BF20766C95002B721D /* ViewController.swift */; };
 		436E56C320766C95002B721D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E56C120766C95002B721D /* Main.storyboard */; };
 		436E56C520766C98002B721D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E56C420766C98002B721D /* Assets.xcassets */; };
 		436E56C820766C98002B721D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E56C620766C98002B721D /* LaunchScreen.storyboard */; };
 		436E56D320766C99002B721D /* CocoaPodGRDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E56D220766C99002B721D /* CocoaPodGRDBUITests.swift */; };
+		B5C4C08B9EC5949804E3EB68 /* libPods-CocoaPodGRDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6BE0A2D75CC9C7EE4FB456 /* libPods-CocoaPodGRDB.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A6BE0A2D75CC9C7EE4FB456 /* libPods-CocoaPodGRDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaPodGRDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E51757C708C957205B9FAF7 /* Pods-CocoaPodGRDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodGRDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPodGRDB/Pods-CocoaPodGRDB.release.xcconfig"; sourceTree = "<group>"; };
 		436E56BA20766C95002B721D /* CocoaPodGRDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaPodGRDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E56BD20766C95002B721D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		436E56CE20766C99002B721D /* CocoaPodGRDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaPodGRDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E56D220766C99002B721D /* CocoaPodGRDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaPodGRDBUITests.swift; sourceTree = "<group>"; };
 		436E56D420766C99002B721D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E94250617CB9E49E4EC7C53 /* Pods_CocoaPodGRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaPodGRDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		731B025453644C909D785791 /* Pods-CocoaPodGRDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodGRDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPodGRDB/Pods-CocoaPodGRDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35329723071CB27C4D63C10C /* Pods_CocoaPodGRDB.framework in Frameworks */,
+				B5C4C08B9EC5949804E3EB68 /* libPods-CocoaPodGRDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 		D455E86974DAB463999F32C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E94250617CB9E49E4EC7C53 /* Pods_CocoaPodGRDB.framework */,
+				0A6BE0A2D75CC9C7EE4FB456 /* libPods-CocoaPodGRDB.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,7 +131,6 @@
 				436E56B620766C95002B721D /* Sources */,
 				436E56B720766C95002B721D /* Frameworks */,
 				436E56B820766C95002B721D /* Resources */,
-				867AA81F3F345BF28BDF6A01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,24 +234,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		867AA81F3F345BF28BDF6A01 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CocoaPodGRDB/Pods-CocoaPodGRDB-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaPodGRDB/Pods-CocoaPodGRDB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
